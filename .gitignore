@@ -1,2 +1,5 @@
 Data/
 *.png
+.idea/*
+.git/*
+NLP/datasets/*
