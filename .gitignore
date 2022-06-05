@@ -1,3 +1,6 @@
 Data/
 *.png
 NLP/Saved Models/
+.idea/*
+.git/*
+NLP/datasets/*
