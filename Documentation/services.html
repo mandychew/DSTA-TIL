@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provided Services &mdash; TIL Final  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Adding ML models" href="models.html" />
+    <link rel="prev" title="Definitions" href="definitions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> TIL Final
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">SDK Installation and Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="details.html">Challenge Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Provided Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#robotmaster-sdk">Robotmaster SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#localization-service">Localization Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#service-details">Service Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#map-service">Map Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#map-service-details">Service Details</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reporting-service">Reporting Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reporting-service-details">Service Details</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Adding ML models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation &amp; Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TIL Final</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Provided Services</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/services.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="provided-services">
+<h1>Provided Services<a class="headerlink" href="#provided-services" title="Permalink to this heading"></a></h1>
+<p>Several services are provided to enable you to interact with the robot and arena.</p>
+<p>This page describes the services in detail. If you use the provided Challenge SDK, you
+may skip the service detail sections.</p>
+<div class="section" id="robotmaster-sdk">
+<h2>Robotmaster SDK<a class="headerlink" href="#robotmaster-sdk" title="Permalink to this heading"></a></h2>
+<p>The DJI Robomaster SDK allows control of the robot. See <a class="reference external" href="https://robomaster-dev.readthedocs.io/en/latest/">DJI Robomaster SDK documentation</a> for details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The robot pose information provided by the SDK is a result of dead-reckoning,
+and is not aligned to the arena frame. For this reason it cannot be used
+with the rest of the challenge provided services.</p>
+<p>Use the location and pose information provided by the <a class="reference internal" href="#localization-service"><span class="std std-ref">Localization Service</span></a>
+instead.</p>
+</div>
+</div>
+<div class="section" id="localization-service">
+<span id="id1"></span><h2>Localization Service<a class="headerlink" href="#localization-service" title="Permalink to this heading"></a></h2>
+<p>The localisation service provides the robot’s real-time pose and any clues received
+at the robot’s present location. Clues each comprise an audio file and an audio source
+location. The audio may indicate various emotions, and audio that indicate distress
+(classified “angry” or “sad”) should be prioritised for investigation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To use the SDK to obtain robot pose and clues see <a class="reference internal" href="autoapi/tilsdk/localization/index.html#tilsdk.localization.LocalizationService.get_pose" title="tilsdk.localization.LocalizationService.get_pose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tilsdk.localization.LocalizationService.get_pose()</span></code></a></p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tilsdk.localization</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+
+<span class="n">loc_service</span> <span class="o">=</span> <span class="n">LocalizationService</span><span class="p">()</span>
+
+<span class="o">...</span>
+
+<span class="n">pose</span><span class="p">,</span> <span class="n">clues</span> <span class="o">=</span> <span class="n">loc_service</span><span class="o">.</span><span class="n">get_pose</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="service-details">
+<span id="localization-service-details"></span><h3>Service Details<a class="headerlink" href="#service-details" title="Permalink to this heading"></a></h3>
+<p>The localisation service shall be available as a HTTP endpoint at
+<code class="docutils literal notranslate"><span class="pre">http://&lt;host&gt;:&lt;port&gt;/pose</span></code>. A <code class="docutils literal notranslate"><span class="pre">GET</span></code> request on the localisation service endpoint
+shall return a JSON object (Content-Type <code class="docutils literal notranslate"><span class="pre">application/json</span></code>) of the following schema:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;pose&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;x&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="nt">&quot;y&quot;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span>
+        <span class="nt">&quot;z&quot;</span><span class="p">:</span> <span class="mf">3.0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;clues&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;x&quot;</span><span class="p">:</span> <span class="mf">4.0</span><span class="p">,</span>
+                <span class="nt">&quot;y&quot;</span><span class="p">:</span> <span class="mf">5.0</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;audio&quot;</span><span class="p">:</span> <span class="s2">&quot;Q29uZ3JhdHVsYXRpb25zLCB5b3UgZm91bmQgYW4gRWFzdGVyIEVnZyE=&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 8%" />
+<col style="width: 5%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>UOM</p></th>
+<th class="head"><p>Remarks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pose.x</span></code></p></td>
+<td><p>float</p></td>
+<td><p>m</p></td>
+<td><p>x-coordinate of robot location relative to arena.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pose.y</span></code></p></td>
+<td><p>float</p></td>
+<td><p>m</p></td>
+<td><p>y-coordinate of robot location relative to arena.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pose.z</span></code></p></td>
+<td><p>float</p></td>
+<td><p>deg</p></td>
+<td><p>Robot heading relative to arena, measured clockwise from x-direction.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">clues[n].clue_id</span></code></p></td>
+<td><p>int</p></td>
+<td><p>N/A</p></td>
+<td><p>Unique clue ID.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clues[n].location.x</span></code></p></td>
+<td><p>float</p></td>
+<td><p>m</p></td>
+<td><p>x-coordinate of location of audio source, relative to arena.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">clues[n].location.y</span></code></p></td>
+<td><p>float</p></td>
+<td><p>m</p></td>
+<td><p>y-coordinate of location of audio source, relative to arena.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clues[n].audio</span></code></p></td>
+<td><p>string</p></td>
+<td><p>N/A</p></td>
+<td><p>Base64 encoded WAV file to be classified.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="map-service">
+<span id="id2"></span><h2>Map Service<a class="headerlink" href="#map-service" title="Permalink to this heading"></a></h2>
+<p>The map service provides a static map of the arena as an image. The image represents
+an occupancy grid, where non-occupied (i.e. passable) cells are black and occupied
+(i.e. non-passable) cells are white. This map does not change, so it only needs to be
+retrieved once.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To use the SDK to get the map, see <a class="reference internal" href="autoapi/tilsdk/localization/index.html#tilsdk.localization.LocalizationService.get_map" title="tilsdk.localization.LocalizationService.get_map"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tilsdk.localization.LocalizationService.get_map()</span></code></a>.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tilsdk.localization</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+
+<span class="n">loc_service</span> <span class="o">=</span> <span class="n">LocalizationService</span><span class="p">()</span>
+
+<span class="o">...</span>
+
+<span class="n">map_</span> <span class="o">=</span> <span class="n">loc_service</span><span class="o">.</span><span class="n">map</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="map-service-details">
+<span id="id3"></span><h3>Service Details<a class="headerlink" href="#map-service-details" title="Permalink to this heading"></a></h3>
+<p>The map service shall be available as a HTTP endpoint at <code class="docutils literal notranslate"><span class="pre">http://&lt;host&gt;:&lt;port&gt;/map</span></code>.
+A <code class="docutils literal notranslate"><span class="pre">GET</span></code> request on the map service endpoint shall return a JSON object
+(Content-Type <code class="docutils literal notranslate"><span class="pre">application/json</span></code>) of the following schema:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;map&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+        <span class="nt">&quot;grid&quot;</span><span class="p">:</span> <span class="s2">&quot;Q29uZ3JhdHVsYXRpb25zLCB5b3UgZm91bmQgYW4gRWFzdGVyIEVnZyE=&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>UOM</p></th>
+<th class="head"><p>Remarks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scale</span></code></p></td>
+<td><p>float</p></td>
+<td><p>m/px</p></td>
+<td><p>Scale of the grid image. A scale of n means each pixel in the grid image represents nxn meters on the physical arena.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">grid</span></code></p></td>
+<td><p>string</p></td>
+<td><p>N/A</p></td>
+<td><p>Base64 encoded grid image, the value of each pixel indicates the occupancy of that cell. The image is black (value=0) for empty cells and white (value=255) for occupied cells.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="reporting-service">
+<span id="id4"></span><h2>Reporting Service<a class="headerlink" href="#reporting-service" title="Permalink to this heading"></a></h2>
+<p>The reporting service allows the robot to report targets to human rescuers. For the
+purposes of the competition, the submissions to the report service are used for scoring.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To use the SDK to report targets see <a class="reference internal" href="autoapi/tilsdk/reporting/index.html#tilsdk.reporting.ReportingService.report" title="tilsdk.reporting.ReportingService.report"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tilsdk.reporting.ReportingService.report()</span></code></a>.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tilsdk.reporting</span> <span class="kn">import</span> <span class="n">ReportingService</span>
+
+<span class="o">...</span>
+
+<span class="n">rep_service</span> <span class="o">=</span> <span class="n">ReportingService</span><span class="p">()</span>
+
+<span class="o">...</span>
+
+<span class="n">rep_service</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">pose</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reporting-service-details">
+<span id="id5"></span><h3>Service Details<a class="headerlink" href="#reporting-service-details" title="Permalink to this heading"></a></h3>
+<p>The reporting service shall be available as a HTTP endpoint at <code class="docutils literal notranslate"><span class="pre">http://&lt;host&gt;:&lt;port&gt;/report</span></code>.
+To submit targets, perform a <code class="docutils literal notranslate"><span class="pre">POST</span></code> request on the reporting service endpoint with a JSON
+message body (Content-Type <code class="docutils literal notranslate"><span class="pre">application/json</span></code>) of the following schema:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;pose&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;x&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="nt">&quot;y&quot;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span>
+        <span class="nt">&quot;z&quot;</span><span class="p">:</span> <span class="mf">3.0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;Q29uZ3JhdHVsYXRpb25zLCB5b3UgZm91bmQgYW4gRWFzdGVyIEVnZyE=&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;targets&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;cls&quot;</span><span class="p">:</span> <span class="s2">&quot;fallen&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;bbox&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;x&quot;</span><span class="p">:</span> <span class="mf">300.0</span><span class="p">,</span>
+                <span class="nt">&quot;y&quot;</span><span class="p">:</span> <span class="mf">200.0</span><span class="p">,</span>
+                <span class="nt">&quot;w&quot;</span><span class="p">:</span> <span class="mf">350.0</span><span class="p">,</span>
+                <span class="nt">&quot;h&quot;</span><span class="p">:</span> <span class="mf">100.0</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>UOM</p></th>
+<th class="head"><p>Remarks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pose.x</span></code></p></td>
+<td><p>float</p></td>
+<td><p>m</p></td>
+<td><p>x-coordinate of robot location relative to arena.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pose.y</span></code></p></td>
+<td><p>float</p></td>
+<td><p>m</p></td>
+<td><p>y-coordinate of robot location relative to arena.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pose.z</span></code></p></td>
+<td><p>float</p></td>
+<td><p>deg</p></td>
+<td><p>Robot heading relative to arena, measured clockwise from x-direction.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">image</span></code></p></td>
+<td><p>string</p></td>
+<td><p>N/A</p></td>
+<td><p>Base64 encoded image, annotated with bounding boxes and id for each target.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">targets[n].id</span></code></p></td>
+<td><p>int</p></td>
+<td><p>N/A</p></td>
+<td><p>Target ID, must correspond with that in annotated image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">targets[n].cls</span></code></p></td>
+<td><p>string</p></td>
+<td><p>N/A</p></td>
+<td><p>Result of classification. One of “mobile” or “immobile”.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">targets[n].bbox.x</span></code></p></td>
+<td><p>float</p></td>
+<td><p>pixels</p></td>
+<td><p>Bounding box center x-coordinate in image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">targets[n].bbox.y</span></code></p></td>
+<td><p>float</p></td>
+<td><p>pixels</p></td>
+<td><p>Bounding box center y-coordinate in image.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">targets[n].bbox.w</span></code></p></td>
+<td><p>float</p></td>
+<td><p>pixels</p></td>
+<td><p>Bounding box width.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">targets[n].bbox.h</span></code></p></td>
+<td><p>float</p></td>
+<td><p>pixels</p></td>
+<td><p>Bounding box height.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="definitions.html" class="btn btn-neutral float-left" title="Definitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="models.html" class="btn btn-neutral float-right" title="Adding ML models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Je Hon Tan, Bowen Low.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

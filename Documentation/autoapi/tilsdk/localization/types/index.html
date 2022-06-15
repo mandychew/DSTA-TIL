@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tilsdk.localization.types &mdash; TIL Final  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> TIL Final
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install.html">SDK Installation and Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../details.html">Challenge Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../services.html">Provided Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../models.html">Adding ML models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../simulation.html">Simulation &amp; Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">TIL Final</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">tilsdk.localization.types</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/tilsdk/localization/types/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-tilsdk.localization.types">
+<span id="tilsdk-localization-types"></span><h1><a class="reference internal" href="#module-tilsdk.localization.types" title="tilsdk.localization.types"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tilsdk.localization.types</span></code></a><a class="headerlink" href="#module-tilsdk.localization.types" title="Permalink to this heading"></a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsdk.localization.types.Clue" title="tilsdk.localization.types.Clue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Clue</span></code></a></p></td>
+<td><p>Clue</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GridLocation</span></code></a></p></td>
+<td><p>Pixel coordinates (x, y)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsdk.localization.types.GridPose" title="tilsdk.localization.types.GridPose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GridPose</span></code></a></p></td>
+<td><p>Pixel coordinates (x, y, z) where z is angle from x-axis in deg.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RealLocation</span></code></a></p></td>
+<td><p>Pixel coordinates (x, y)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsdk.localization.types.RealPose" title="tilsdk.localization.types.RealPose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RealPose</span></code></a></p></td>
+<td><p>Real coordinates (x, y, z) where z is angle from x-axis in deg.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsdk.localization.types.SignedDistanceGrid" title="tilsdk.localization.types.SignedDistanceGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SignedDistanceGrid</span></code></a></p></td>
+<td><p>Grid map representation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsdk.localization.types.euclidean_distance" title="tilsdk.localization.types.euclidean_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">euclidean_distance</span></code></a>(a, b)</p></td>
+<td><p>Compute the Euclidean distance between points.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsdk.localization.types.grid_to_real" title="tilsdk.localization.types.grid_to_real"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grid_to_real</span></code></a>(…)</p></td>
+<td><p>Convert grid coordinates to real coordinates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsdk.localization.types.real_to_grid" title="tilsdk.localization.types.real_to_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real_to_grid</span></code></a>(…)</p></td>
+<td><p>Convert real coordinates to grid coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsdk.localization.types.real_to_grid_exact" title="tilsdk.localization.types.real_to_grid_exact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real_to_grid_exact</span></code></a>(id, scale)</p></td>
+<td><p>Convert real coordinates to grid coordinates without discretization.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsdk.localization.types.Clue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">Clue</span></span><a class="headerlink" href="#tilsdk.localization.types.Clue" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
+<p>Clue</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.Clue.audio">
+<span class="sig-name descname"><span class="pre">audio</span></span><em class="property"><span class="w"> </span><span class="pre">:bytes</span></em><a class="headerlink" href="#tilsdk.localization.types.Clue.audio" title="Permalink to this definition"></a></dt>
+<dd><p>Clue audio data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.Clue.clue_id">
+<span class="sig-name descname"><span class="pre">clue_id</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#tilsdk.localization.types.Clue.clue_id" title="Permalink to this definition"></a></dt>
+<dd><p>Unique clue id.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.Clue.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="w"> </span><span class="pre">:RealLocation</span></em><a class="headerlink" href="#tilsdk.localization.types.Clue.location" title="Permalink to this definition"></a></dt>
+<dd><p>Associated location.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsdk.localization.types.GridLocation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">GridLocation</span></span><a class="headerlink" href="#tilsdk.localization.types.GridLocation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
+<p>Pixel coordinates (x, y)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.GridLocation.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#tilsdk.localization.types.GridLocation.x" title="Permalink to this definition"></a></dt>
+<dd><p>X-coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.GridLocation.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#tilsdk.localization.types.GridLocation.y" title="Permalink to this definition"></a></dt>
+<dd><p>Y-coordinate.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsdk.localization.types.GridPose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">GridPose</span></span><a class="headerlink" href="#tilsdk.localization.types.GridPose" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
+<p>Pixel coordinates (x, y, z) where z is angle from x-axis in deg.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.GridPose.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#tilsdk.localization.types.GridPose.x" title="Permalink to this definition"></a></dt>
+<dd><p>X-coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.GridPose.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="w"> </span><span class="pre">:int</span></em><a class="headerlink" href="#tilsdk.localization.types.GridPose.y" title="Permalink to this definition"></a></dt>
+<dd><p>Y-coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.GridPose.z">
+<span class="sig-name descname"><span class="pre">z</span></span><em class="property"><span class="w"> </span><span class="pre">:float</span></em><a class="headerlink" href="#tilsdk.localization.types.GridPose.z" title="Permalink to this definition"></a></dt>
+<dd><p>Heading angle (rel. x-axis) in degrees.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsdk.localization.types.RealLocation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">RealLocation</span></span><a class="headerlink" href="#tilsdk.localization.types.RealLocation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
+<p>Pixel coordinates (x, y)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.RealLocation.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="w"> </span><span class="pre">:float</span></em><a class="headerlink" href="#tilsdk.localization.types.RealLocation.x" title="Permalink to this definition"></a></dt>
+<dd><p>X-coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.RealLocation.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="w"> </span><span class="pre">:float</span></em><a class="headerlink" href="#tilsdk.localization.types.RealLocation.y" title="Permalink to this definition"></a></dt>
+<dd><p>Y-coordinate.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsdk.localization.types.RealPose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">RealPose</span></span><a class="headerlink" href="#tilsdk.localization.types.RealPose" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">NamedTuple</span></code></p>
+<p>Real coordinates (x, y, z) where z is angle from x-axis in deg.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.RealPose.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="w"> </span><span class="pre">:float</span></em><a class="headerlink" href="#tilsdk.localization.types.RealPose.x" title="Permalink to this definition"></a></dt>
+<dd><p>X-coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.RealPose.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="w"> </span><span class="pre">:float</span></em><a class="headerlink" href="#tilsdk.localization.types.RealPose.y" title="Permalink to this definition"></a></dt>
+<dd><p>Y-coordinate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tilsdk.localization.types.RealPose.z">
+<span class="sig-name descname"><span class="pre">z</span></span><em class="property"><span class="w"> </span><span class="pre">:float</span></em><a class="headerlink" href="#tilsdk.localization.types.RealPose.z" title="Permalink to this definition"></a></dt>
+<dd><p>Heading angle (rel. x-axis) in degrees.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">SignedDistanceGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid" title="Permalink to this definition"></a></dt>
+<dd><p>Grid map representation.</p>
+<p>Grid elements are square and represented by a float.
+Value indicates distance from nearest obstacle.
+Value &lt;= 0 indicates occupied, &gt; 0 indicates passable.</p>
+<p>Grid is centered-aligned, i.e. real-world postion
+corresponds to center of grid square.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<em>int</em>) – Width of map in number of grid elements, corresponding to real-world x-axis. Ignored if grid parameter is specified.</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – Height of map in number of grid elements, corresponding to real-world y-axis. Ignored if grid parameter is specified.</p></li>
+<li><p><strong>grid</strong> (<em>nxm ArrayLike</em>) – Numpy array of grid data, corresponding to a grid of width m and heigh n.</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – Ratio of real-world unit to grid unit.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid.dilated">
+<span class="sig-name descname"><span class="pre">dilated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid.dilated" title="Permalink to this definition"></a></dt>
+<dd><p>Dilate obstacles in grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>distance</strong> (<em>float</em>) – Size of dilation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Grid with dilated obstacles.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tilsdk.localization.types.SignedDistanceGrid" title="tilsdk.localization.types.SignedDistanceGrid">SignedDistanceGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid.from_image">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid.from_image" title="Permalink to this definition"></a></dt>
+<dd><p>Factory method to create map from image.</p>
+<p>Only the first channel is used. Channel value should be 0 where passable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>Any</em>) – Input image.</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – Ratio of real-world unit to grid unit.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>map</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tilsdk.localization.types.SignedDistanceGrid" title="tilsdk.localization.types.SignedDistanceGrid">SignedDistanceGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid.grid_to_real">
+<span class="sig-name descname"><span class="pre">grid_to_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid.grid_to_real" title="Permalink to this definition"></a></dt>
+<dd><p>Convert grid coordinates to real coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation"><em>GridLocation</em></a>) – Input location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Corresponding RealLocation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation">RealLocation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid.in_bounds">
+<span class="sig-name descname"><span class="pre">in_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid.in_bounds" title="Permalink to this definition"></a></dt>
+<dd><p>Check if grid location is in bounds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation"><em>GridLocation</em></a>) – Input location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if location is in bounds.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid.neighbours">
+<span class="sig-name descname"><span class="pre">neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid.neighbours" title="Permalink to this definition"></a></dt>
+<dd><p>Get valid neighbours and cost of grid location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation"><em>GridLocation</em></a>) – Input location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>neighbours</strong> – List of tuples of neighbouring locations and the costs to those locations.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[Tuple[<a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation">GridLocation</a>, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid.passable">
+<span class="sig-name descname"><span class="pre">passable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid.passable" title="Permalink to this definition"></a></dt>
+<dd><p>Check if grid location is passable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation"><em>GridLocation</em></a>) – Input location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if location is in passable.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsdk.localization.types.SignedDistanceGrid.real_to_grid">
+<span class="sig-name descname"><span class="pre">real_to_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.SignedDistanceGrid.real_to_grid" title="Permalink to this definition"></a></dt>
+<dd><p>Convert real coordinates to grid coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation"><em>RealLocation</em></a>) – Input location.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Corresponding GridLocation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation">GridLocation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsdk.localization.types.euclidean_distance">
+<span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">euclidean_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.euclidean_distance" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the Euclidean distance between points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>Union</em><em>[</em><a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation"><em>RealLocation</em></a><em>, </em><a class="reference internal" href="#tilsdk.localization.types.RealPose" title="tilsdk.localization.types.RealPose"><em>RealPose</em></a><em>]</em>) – First point.</p></li>
+<li><p><strong>b</strong> (<em>Union</em><em>[</em><a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation"><em>RealLocation</em></a><em>, </em><a class="reference internal" href="#tilsdk.localization.types.RealPose" title="tilsdk.localization.types.RealPose"><em>RealPose</em></a><em>]</em>) – Second point.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Euclidean distance between points.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsdk.localization.types.grid_to_real">
+<span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">grid_to_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation"><span class="pre">GridLocation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation"><span class="pre">RealLocation</span></a></span></span><a class="headerlink" href="#tilsdk.localization.types.grid_to_real" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">grid_to_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tilsdk.localization.types.GridPose" title="tilsdk.localization.types.GridPose"><span class="pre">GridPose</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tilsdk.localization.types.RealPose" title="tilsdk.localization.types.RealPose"><span class="pre">RealPose</span></a></span></span></dt>
+<dd><p>Convert grid coordinates to real coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – Input location/pose.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Corresponding real location/pose.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsdk.localization.types.real_to_grid">
+<span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">real_to_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation"><span class="pre">RealLocation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tilsdk.localization.types.GridLocation" title="tilsdk.localization.types.GridLocation"><span class="pre">GridLocation</span></a></span></span><a class="headerlink" href="#tilsdk.localization.types.real_to_grid" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">real_to_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tilsdk.localization.types.RealPose" title="tilsdk.localization.types.RealPose"><span class="pre">RealPose</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tilsdk.localization.types.GridPose" title="tilsdk.localization.types.GridPose"><span class="pre">GridPose</span></a></span></span></dt>
+<dd><p>Convert real coordinates to grid coordinates.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Grid coordinates are discretized. To get non discretized grid coordinates, see <a class="reference internal" href="#tilsdk.localization.types.real_to_grid_exact" title="tilsdk.localization.types.real_to_grid_exact"><code class="xref py py-meth docutils literal notranslate"><span class="pre">real_to_grid_exact()</span></code></a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – Input location/pose.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Corresponding gird location/pose.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsdk.localization.types.real_to_grid_exact">
+<span class="sig-prename descclassname"><span class="pre">tilsdk.localization.types.</span></span><span class="sig-name descname"><span class="pre">real_to_grid_exact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsdk.localization.types.real_to_grid_exact" title="Permalink to this definition"></a></dt>
+<dd><p>Convert real coordinates to grid coordinates without discretization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference internal" href="#tilsdk.localization.types.RealLocation" title="tilsdk.localization.types.RealLocation"><em>RealLocation</em></a>) – Input location.</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – Ratio of real-world unit to grid unit.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Grid location without discretization.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[float, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Je Hon Tan, Bowen Low.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

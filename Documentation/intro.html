@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; TIL Final  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SDK Installation and Use" href="install.html" />
+    <link rel="prev" title="TIL2022 Robotics Challenge’s" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> TIL Final
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#robot-description">Robot description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arena-description">Arena description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">SDK Installation and Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="details.html">Challenge Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="services.html">Provided Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Adding ML models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation &amp; Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TIL Final</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<p>In a disaster site SAR there are many potential hazards to human rescuers
+(e.g. unstable structures, dangerous chemicals and gases, etc.). In order
+to minimise the exposure of human rescuers to hazards, robots may be used
+to locate survivors. Mobile survivors may be directed to escape the disaster
+site themselves, while immobile survivors may have their location reported
+to human rescuers, allowing rescuers to prioritise their rescue and better
+plan rescue approaches. While teleoperated robots may serve this purpose,
+autonomous robots will allow searching of a larger site in less time with
+less personnel.</p>
+<p>In this final challenge of Brainhack, you will be introduced to
+robotics by developing an autonomous search-and-rescue (SAR) robot.</p>
+<p>Your challenge is to develop the autonomy software to direct a robot to
+navigate about an arena simulating a building disaster site.</p>
+<p>You will make use of the CV and NLP models that they have developed in
+previous challenges to detect and classify human targets, submitting high
+priority targets to remote “rescuers”.</p>
+<div class="section" id="robot-description">
+<h2>Robot description<a class="headerlink" href="#robot-description" title="Permalink to this heading"></a></h2>
+<p>The robot you will use in this challenge is the <a class="reference external" href="https://www.dji.com/sg/robomaster-ep">DJI Robomaster EP</a>. For this reason this documentation
+should be read in conjunction with the <a class="reference external" href="https://robomaster-dev.readthedocs.io/en/latest/">DJI Robomaster SDK documentation</a>.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/robomaster.jpg"><img alt="_images/robomaster.jpg" src="_images/robomaster.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">DJI Robomaster EP Infantry Configuration</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</div>
+</div>
+<div class="section" id="arena-description">
+<h2>Arena description<a class="headerlink" href="#arena-description" title="Permalink to this heading"></a></h2>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Add arena description.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="TIL2022 Robotics Challenge’s" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-right" title="SDK Installation and Use" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Je Hon Tan, Bowen Low.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

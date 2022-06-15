@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDK Installation and Use &mdash; TIL Final  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Challenge Details" href="details.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> TIL Final
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SDK Installation and Use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code-organization">Code Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-sdk-and-simulator">Installing the SDK and Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-documentation">Building the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-sdk">Using the SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-simulator">Using the Simulator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="details.html">Challenge Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="services.html">Provided Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Adding ML models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation &amp; Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TIL Final</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>SDK Installation and Use</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="sdk-installation-and-use">
+<h1>SDK Installation and Use<a class="headerlink" href="#sdk-installation-and-use" title="Permalink to this heading"></a></h1>
+<div class="section" id="code-organization">
+<h2>Code Organization<a class="headerlink" href="#code-organization" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">til-final</span></code> repository is organized as follows:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src/</span></code>: SDK and simulator packages. You should not modify this.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config/</span></code>: SDK and simulator sample configuration files. You should copy these for your own use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data/</span></code>: Simulator sample data. You should copy these for your own use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs/</span></code>: Documentation source. You should not modify this.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stubs/</span></code>: Code stubs. You should copy these for your own use.</p></li>
+</ul>
+<p>You should create a workspace directory (e.g. <code class="docutils literal notranslate"><span class="pre">your_workspace</span></code>) and copy the relevant
+directories to it.</p>
+</div>
+<div class="section" id="installing-the-sdk-and-simulator">
+<h2>Installing the SDK and Simulator<a class="headerlink" href="#installing-the-sdk-and-simulator" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All the code used for this challenge is written in Python3.
+Python2 is unsupporter. Before you begin, ensure that you
+are using Python3, and use <code class="docutils literal notranslate"><span class="pre">python3</span></code> or <code class="docutils literal notranslate"><span class="pre">pip3</span></code> instead
+of <code class="docutils literal notranslate"><span class="pre">python</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code> as required.</p>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Update links for repository.</p>
+</div>
+<p>Clone the <code class="docutils literal notranslate"><span class="pre">til-final</span></code> repository to your local machine.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> your_workspace
+git clone https://github.com/jehontan/til-final.git
+</pre></div>
+</div>
+<p>Install the SDK and simulator.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install ./til-final
+</pre></div>
+</div>
+<p>This will install the <code class="docutils literal notranslate"><span class="pre">tilsdk</span></code> library and <code class="docutils literal notranslate"><span class="pre">til-simulator</span></code>
+executable on your system.</p>
+<p>You can verify that the install is successful by executing:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip list <span class="p">|</span> grep til-final
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-the-documentation">
+<h2>Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this heading"></a></h2>
+<p>To build the documentation requires Sphinx and AutoAPI.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install sphinx sphinx-autoapi sphinx-rtd-theme
+</pre></div>
+</div>
+<p>Build the documentation as HTML packages</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> your_workspace/til-final
+sphinx-build -b html docs/source docs/build/
+</pre></div>
+</div>
+<p>To view the documentation open <code class="docutils literal notranslate"><span class="pre">docs/build/index.html</span></code>.</p>
+</div>
+<div class="section" id="using-the-sdk">
+<h2>Using the SDK<a class="headerlink" href="#using-the-sdk" title="Permalink to this heading"></a></h2>
+<p>Once installed, the SDK can be used by simply importing <code class="docutils literal notranslate"><span class="pre">tilsdk</span></code>.
+For detials on the SDK, check out <a class="reference internal" href="services.html"><span class="doc">Provided Services</span></a> and <a class="reference internal" href="autoapi/index.html"><span class="doc">API Reference</span></a>.</p>
+</div>
+<div class="section" id="using-the-simulator">
+<h2>Using the Simulator<a class="headerlink" href="#using-the-simulator" title="Permalink to this heading"></a></h2>
+<p>To use the simulator run <code class="docutils literal notranslate"><span class="pre">til-simulator</span></code> in a terminal. For details on
+the simulator see <a class="reference internal" href="simulation.html"><span class="doc">Simulation &amp; Testing</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="details.html" class="btn btn-neutral float-right" title="Challenge Details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Je Hon Tan, Bowen Low.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

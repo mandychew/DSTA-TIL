@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tilsim.simulator &mdash; TIL Final  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> TIL Final
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">SDK Installation and Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../details.html">Challenge Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../services.html">Provided Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models.html">Adding ML models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../simulation.html">Simulation &amp; Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">TIL Final</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">tilsim.simulator</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/tilsim/simulator/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-tilsim.simulator">
+<span id="tilsim-simulator"></span><h1><a class="reference internal" href="#module-tilsim.simulator" title="tilsim.simulator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tilsim.simulator</span></code></a><a class="headerlink" href="#module-tilsim.simulator" title="Permalink to this heading"></a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.ActualRobot" title="tilsim.simulator.ActualRobot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActualRobot</span></code></a></p></td>
+<td><p>Passthrough for actual robot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.SimRobot" title="tilsim.simulator.SimRobot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimRobot</span></code></a></p></td>
+<td><p>Simulated robot.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.draw_clues" title="tilsim.simulator.draw_clues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_clues</span></code></a>(ax)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.draw_robot" title="tilsim.simulator.draw_robot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_robot</span></code></a>(ax, refs=None, draw_noisy=False)</p></td>
+<td><p>Draw robot on given axes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.draw_targets" title="tilsim.simulator.draw_targets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_targets</span></code></a>(ax)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.get_camera" title="tilsim.simulator.get_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_camera</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.get_map" title="tilsim.simulator.get_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_map</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.get_pose" title="tilsim.simulator.get_pose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_pose</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.main" title="tilsim.simulator.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.post_cmd_vel" title="tilsim.simulator.post_cmd_vel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">post_cmd_vel</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.post_report" title="tilsim.simulator.post_report"><code class="xref py py-obj docutils literal notranslate"><span class="pre">post_report</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.start_server" title="tilsim.simulator.start_server"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_server</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.Rot" title="tilsim.simulator.Rot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rot</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.app" title="tilsim.simulator.app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#tilsim.simulator.map_log_level" title="tilsim.simulator.map_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_log_level</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#tilsim.simulator.protocol_version" title="tilsim.simulator.protocol_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">protocol_version</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsim.simulator.ActualRobot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">ActualRobot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5567</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.ActualRobot" title="Permalink to this definition"></a></dt>
+<dd><p>Passthrough for actual robot.</p>
+<p>Uses pose information from a localization service
+instance and does not perform simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> (<em>str</em>) – Localization service host.</p></li>
+<li><p><strong>port</strong> (<em>int</em>) – Localization service port.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsim.simulator.ActualRobot.pose">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.ActualRobot.pose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsim.simulator.ActualRobot.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.ActualRobot.step" title="Permalink to this definition"></a></dt>
+<dd><p>Step the simulation.</p>
+<p>For ActualRobot this gets latest pose from localization service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dt</strong> (<em>float</em>) – Time since last simulation step.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tilsim.simulator.Rot">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">Rot</span></span><a class="headerlink" href="#tilsim.simulator.Rot" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tilsim.simulator.SimRobot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">SimRobot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.SimRobot" title="Permalink to this definition"></a></dt>
+<dd><p>Simulated robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> – Initial pose.</p></li>
+<li><p><strong>vel</strong> – Initial velocity.</p></li>
+<li><p><strong>timeout</strong> (<em>float</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsim.simulator.SimRobot.last_changed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.SimRobot.last_changed" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsim.simulator.SimRobot.noisy_pose">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noisy_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.SimRobot.noisy_pose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsim.simulator.SimRobot.pose">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.SimRobot.pose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsim.simulator.SimRobot.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.SimRobot.step" title="Permalink to this definition"></a></dt>
+<dd><p>Step the simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dt</strong> (<em>float</em>) – Time since last simulation step.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tilsim.simulator.SimRobot.vel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.SimRobot.vel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tilsim.simulator.app">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">app</span></span><a class="headerlink" href="#tilsim.simulator.app" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.draw_clues">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">draw_clues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.draw_clues" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.draw_robot">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">draw_robot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_noisy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.draw_robot" title="Permalink to this definition"></a></dt>
+<dd><p>Draw robot on given axes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>refs</strong> – Matplotlib refs to previously draw robot.</p></li>
+<li><p><strong>draw_noisy</strong> (<em>bool</em>) – Draw robot with simulated noise.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Matplotlib refs to drawn robot.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>new_refs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.draw_targets">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">draw_targets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.draw_targets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.get_camera">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">get_camera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.get_camera" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.get_map">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">get_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.get_map" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.get_pose">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">get_pose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.get_pose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.main">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.main" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tilsim.simulator.map_log_level">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">map_log_level</span></span><a class="headerlink" href="#tilsim.simulator.map_log_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.post_cmd_vel">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">post_cmd_vel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.post_cmd_vel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.post_report">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">post_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.post_report" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tilsim.simulator.protocol_version">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">protocol_version</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">HTTP/1.1</span></em><a class="headerlink" href="#tilsim.simulator.protocol_version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tilsim.simulator.start_server">
+<span class="sig-prename descclassname"><span class="pre">tilsim.simulator.</span></span><span class="sig-name descname"><span class="pre">start_server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tilsim.simulator.start_server" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Je Hon Tan, Bowen Low.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
